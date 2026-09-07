@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="text-center my-5">
+    <h1 class="display-4 fw-bold">Bem-vindo ao Sistema de Consultas</h1>
+    <p class="lead mt-3 text-secondary">
+        Para gerenciar, agendar e visualizar suas consultas médicas, é necessário estar conectado à sua conta.
+    </p>
+
+    <hr class="my-4 w-50 mx-auto" />
+
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div class="alert alert-success d-inline-block px-4 py-3" role="alert">
+            <h5 class="alert-heading mb-2">Você já está autenticado!</h5>
+            <p class="mb-3">Acesse o seu painel para visualizar seus agendamentos.</p>
+            <a asp-controller="Consultas" asp-action="Index" class="btn btn-success btn-lg">
+                Ir para Minhas Consultas
+            </a>
+        </div>
+    }
+    else
+    {
+        <p class="mb-4 text-muted">Escolha uma das opções abaixo para prosseguir:</p>
+        
+        <div class="d-flex justify-content-center gap-3">
+            <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4">
+                Fazer Login
+            </a>
+            <a asp-controller="Account" asp-action="Registro" class="btn btn-outline-primary btn-lg px-4">
+                Criar uma Conta
+            </a>
+        </div>
+    }
+</div>

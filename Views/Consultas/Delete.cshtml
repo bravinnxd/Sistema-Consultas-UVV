@@ -1,0 +1,40 @@
+@model Consulta
+
+@{
+    ViewData["Title"] = "Excluir consulta";
+}
+
+<h1>Excluir consulta</h1>
+
+<h3>Tem certeza que deseja excluir esta consulta?</h3>
+
+<div>
+    <p>
+        <strong>Especialidade:</strong>
+        @Model.Especialidade
+    </p>
+
+    <p>
+        <strong>Data:</strong>
+        @Model.DataHora
+    </p>
+
+    <p>
+        <strong>Descrição:</strong>
+        @Model.Descricao
+    </p>
+</div>
+
+<form asp-action="Delete" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit">
+        Confirmar exclusão
+    </button>
+
+    <a asp-action="Index">
+        Cancelar
+    </a>
+
+</form>

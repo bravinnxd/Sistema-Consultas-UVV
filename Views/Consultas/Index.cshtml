@@ -1,0 +1,45 @@
+@model IEnumerable<Consulta>
+
+@{
+    ViewData["Title"] = "Minhas consultas";
+}
+
+<h1>Minhas consultas</h1>
+
+<a asp-action="Create">
+    Nova consulta
+</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Especialidade</th>
+            <th>Data/Hora</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var consulta in Model)
+        {
+            <tr>
+                <td>@consulta.Especialidade</td>
+                <td>@consulta.DataHora</td>
+                <td>@consulta.Descricao</td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@consulta.Id">
+                        Editar
+                    </a>
+
+                    <a asp-action="Delete" asp-route-id="@consulta.Id">
+                        Excluir
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

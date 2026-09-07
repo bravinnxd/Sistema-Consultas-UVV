@@ -1,0 +1,35 @@
+@model Consulta
+
+@{
+    ViewData["Title"] = "Nova consulta";
+}
+
+<h1>Nova consulta</h1>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label asp-for="Especialidade"></label>
+        <input asp-for="Especialidade" />
+        <span asp-validation-for="Especialidade"></span>
+    </div>
+
+    <div>
+        <label asp-for="DataHora"></label>
+        <input asp-for="DataHora" type="datetime-local" />
+        <span asp-validation-for="DataHora"></span>
+    </div>
+
+    <div>
+        <label asp-for="Descricao"></label>
+        <textarea asp-for="Descricao"></textarea>
+        <span asp-validation-for="Descricao"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+<a asp-action="Index">
+    Voltar
+</a>
