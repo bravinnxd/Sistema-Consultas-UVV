@@ -83,40 +83,39 @@ dotnet --version
 
 ### 1. Clonar o repositório
 
-``` bash
+ bash
 git clone https://github.com/bravinnxd/Sistema-Consultas-UVV.git
-```
+
 
 Acesse a pasta clonada e, se necessário, entre na pasta que contém o
 arquivo `.csproj`.
 
 ### 2. Restaurar as dependências
 
-``` bash
+ bash
 dotnet restore
-```
+
 
 ### 3. Instalar a ferramenta do Entity Framework Core
 
 Caso ainda não esteja instalada:
-
-``` bash
+ bash
 dotnet tool install --global dotnet-ef --version 8.*
-```
+
 
 Verifique com:
 
-``` bash
+ bash
 dotnet ef --version
-```
+
 
 ### 4. Preparar/atualizar o banco de dados
 
 Na pasta que contém o `.csproj`, execute:
 
-``` bash
+ bash
 dotnet ef database update
-```
+
 
 Esse comando aplica as migrations existentes e prepara o banco de dados.
 
@@ -125,15 +124,15 @@ Esse comando aplica as migrations existentes e prepara o banco de dados.
 
 ### 5. Compilar
 
-``` bash
+ bash
 dotnet build
-```
+
 
 ### 6. Executar
 
-``` bash
+ bash
 dotnet run
-```
+
 
 Abra no navegador o endereço informado pelo terminal.
 
@@ -164,9 +163,9 @@ próprios registros.
 
 O sistema possui relacionamento **um para muitos (1:N)**:
 
-``` text
+ text
 Usuario 1 -------- N Consulta
-```
+
 
 Um usuário pode possuir várias consultas, enquanto cada consulta
 pertence a um único usuário.
