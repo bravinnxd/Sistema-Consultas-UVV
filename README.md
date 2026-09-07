@@ -73,9 +73,8 @@ banco utilizado pela aplicação é app.db.
 
 Para verificar o .NET:
 
-``` bash
-dotnet --version
-```
+*bash
+dotnet --version*
 
 ------------------------------------------------------------------------
 
@@ -83,8 +82,8 @@ dotnet --version
 
 ### 1. Clonar o repositório
 
- bash
-git clone https://github.com/bravinnxd/Sistema-Consultas-UVV.git
+ *bash
+git clone https://github.com/bravinnxd/Sistema-Consultas-UVV.git*
 
 
 Acesse a pasta clonada e, se necessário, entre na pasta que contém o
@@ -92,46 +91,46 @@ arquivo .csproj.
 
 ### 2. Restaurar as dependências
 
- bash
-dotnet restore
+ *bash
+dotnet restore*
 
 
 ### 3. Instalar a ferramenta do Entity Framework Core
 
 Caso ainda não esteja instalada:
- bash
+ *bash
 dotnet tool install --global dotnet-ef --version 8.*
 
 
 Verifique com:
 
- bash
-dotnet ef --version
+ *bash
+dotnet ef --version*
 
 
 ### 4. Preparar/atualizar o banco de dados
 
 Na pasta que contém o .csproj, execute:
 
- bash
-dotnet ef database update
+ *bash
+dotnet ef database update*
 
 
 Esse comando aplica as migrations existentes e prepara o banco de dados.
 
 > No Package Manager Console do Visual Studio, o comando equivalente é
-> `Update-Database`.
+> Update-Database.
 
 ### 5. Compilar
 
- bash
-dotnet build
+ *bash
+dotnet build*
 
 
 ### 6. Executar
 
- bash
-dotnet run
+ *bash
+dotnet run*
 
 
 Abra no navegador o endereço informado pelo terminal.
