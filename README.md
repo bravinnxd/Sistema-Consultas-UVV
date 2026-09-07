@@ -43,13 +43,13 @@ das próprias consultas.
 
 O projeto utiliza o padrão **MVC (Model-View-Controller)**.
 
--   **Models:** entidades e validações, incluindo `Usuario.cs` e
-    `Consulta.cs`.
+-   **Models:** entidades e validações, incluindo Usuario.cs e
+    Consulta.cs.
 -   **Controllers:** processamento das requisições, incluindo
-    `AccountController.cs`, `ConsultasController.cs` e
-    `HomeController.cs`.
+    AccountController.cs, ConsultasController.cs e
+    HomeController.cs.
 -   **Views:** interfaces da aplicação desenvolvidas com Razor Views.
--   **Data:** contém o `AppDbContext`, responsável pela comunicação com
+-   **Data:** contém o AppDbContext, responsável pela comunicação com
     o banco.
 -   **Migrations:** contém as migrations utilizadas pelo Entity
     Framework Core.
@@ -60,8 +60,8 @@ O projeto utiliza o padrão **MVC (Model-View-Controller)**.
 
 O projeto utiliza **SQLite** com **Entity Framework Core**.
 
-A string de conexão é configurada em `appsettings.json` e o arquivo de
-banco utilizado pela aplicação é `app.db`.
+A string de conexão é configurada em appsettings.json e o arquivo de
+banco utilizado pela aplicação é app.db.
 
 ------------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ git clone https://github.com/bravinnxd/Sistema-Consultas-UVV.git
 
 
 Acesse a pasta clonada e, se necessário, entre na pasta que contém o
-arquivo `.csproj`.
+arquivo .csproj.
 
 ### 2. Restaurar as dependências
 
@@ -111,7 +111,7 @@ dotnet ef --version
 
 ### 4. Preparar/atualizar o banco de dados
 
-Na pasta que contém o `.csproj`, execute:
+Na pasta que contém o .csproj, execute:
 
  bash
 dotnet ef database update
